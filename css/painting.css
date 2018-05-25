@@ -1,0 +1,113 @@
+body {
+    transition: 0.2s linear;
+}
+#p-block div{
+    display: inline-block;
+}
+#phref {
+    margin: 0px; cursor: default;
+}
+#phref a {
+    cursor: pointer;
+    color: #404040;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+.active {
+    color: red !important;
+}
+#phref a:hover {
+    color: red;
+}
+a.prev {
+    background: url("../images/arrows-hover.png") no-repeat scroll left top rgba(0, 0, 0, 0)!important;
+}
+a.next {
+    background: url("../images/arrows-hover.png") no-repeat scroll right top rgba(0, 0, 0, 0)!important;
+    margin-right: 2px;
+}
+a.prev, a.next {
+    font-size: 0!important;
+    height: 22px!important;
+    vertical-align: top!important;
+    width: 10px!important;
+    z-index: 19;
+    position: relative;
+    display: inline-block!important;
+    top: 7px;
+}
+a.prev:hover {
+    background: url("../images/arrows-hover.png") no-repeat scroll 0 -26px rgba(0, 0, 0, 0)!important;
+}
+a.next:hover {
+    background: url("../images/arrows-hover.png") no-repeat scroll right -26px rgba(0, 0, 0, 0)!important;
+}
+ 
+/* увеличенна€ картинка */
+@media only screen and (min-width: 100px) {
+    #magnify {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: auto;
+      z-index: 9999;
+     }
+}
+
+@media only screen and (min-width: 769px) {
+    #magnify {
+      display: none;
+      position: absolute;
+      height: auto;
+      z-index: 9999;
+     }
+}
+
+#magnify img {
+  width: 100%;
+}
+ 
+/* затемн€ющий фон */
+#overlay {
+  display: none;
+ 
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  z-index: 9990;
+}
+ 
+/* кнопка закрыти€ */
+#close-popup {
+  width: 32px;
+  height: 32px;
+ 
+  background: #FFFFFF;
+  border: 1px solid #AFAFAF;
+  border-radius: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+ 
+#close-popup i {
+  width: 30px;
+  height: 30px;
+  background: url(../images/cross.png) no-repeat center center;
+  background-size: 16px 16px;
+  display: block;
+}
+ @keyframes rota {
+ 25% { transform: rotate(360deg); }
+}
+ 
+#close-popup:hover {
+  animation: rota 4s infinite normal;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
